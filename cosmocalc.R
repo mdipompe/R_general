@@ -32,11 +32,11 @@ cosmocalc <- function(z = 1.0, h = 0.71, om = 0.27, lambda = 0.73) {
   #Luminosity distance
   d_l <- d_m * (1+z)
   #Comoving volume within z
-  if (ok > 0) v_c=((4*pi*d_h^3)/(2*ok))*(((d_m/d_h)*sqrt(1+ok*(d_m^2/d_h^2)))
+  if (ok > 0) v_c <- ((4*pi*d_h^3)/(2*ok))*(((d_m/d_h)*sqrt(1+ok*(d_m^2/d_h^2)))
                                          -((1/sqrt(ok))*asinh(sqrt(ok)*(d_m/d_h))))
-  if (ok == 0) v_c=((4*pi)/3)*d_m^3
-  if (ok < 0) v_c((4*pi*d_h^3)/(2*ok))*(((d_m/d_h)*sqrt(1+ok*(d_m^2/d_h^2)))
-                                        -((1/sqrt(abs(omega_k)))*
+  if (ok == 0) v_c <- ((4*pi)/3)*d_m^3
+  if (ok < 0) v_c <- ((4*pi*d_h^3)/(2*ok))*(((d_m/d_h)*sqrt(1+ok*(d_m^2/d_h^2)))
+                                        -((1/sqrt(abs(ok)))*
                                             asin(sqrt(abs(ok))*(d_m/d_h))))
   #lookback time
   t_l=t_h*y2$value*1e-9
